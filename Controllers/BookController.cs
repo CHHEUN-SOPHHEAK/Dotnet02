@@ -22,9 +22,10 @@ namespace Dotnet02.Controllers
             return Ok(Books);
         }
         // Get by id
+         //Read data by id user input
         [HttpGet("{id}")]
         public ActionResult<Book> GetID( int id){
-            return Ok(Books.FirstOrDefault(c => c.id==id));
+            return Ok(Books.FirstOrDefault(c => c.id==id));          
         }
     }
 }
